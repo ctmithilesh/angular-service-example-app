@@ -1,0 +1,15 @@
+<div>
+  <!-- Angular Template Driven Form  -->
+  <form #loginForm="ngForm" class="form" (ngSubmit)="submitData()">
+    <div>
+      <input type="email" id="email" name="email" placeholder="Enter Email" [(ngModel)]="formData.email" required />
+    </div>
+    <div>
+      <input type="password" id="password" name="password" placeholder="Enter Password" [(ngModel)]="formData.password"
+        required />
+    </div>
+    <div>
+      <button type="submit" [disabled]="!loginForm.valid"> Submit </button>
+    </div>
+  </form>
+</div>

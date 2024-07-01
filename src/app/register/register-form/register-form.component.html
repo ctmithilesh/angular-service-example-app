@@ -1,0 +1,17 @@
+<div>
+  <!-- Angular Template Driven Form  -->
+  <form #registerForm="ngForm" class="form" (ngSubmit)="submitData()">
+    <div>
+      <input type="text" name="username" placeholder="Enter username" [(ngModel)]="formData.username" required />
+    </div>
+    <div>
+      <input type="email" name="email" placeholder="Enter Email" [(ngModel)]="formData.email" required />
+    </div>
+    <div>
+      <input type="password" name="password" placeholder="Enter Password" [(ngModel)]="formData.password" required />
+    </div>
+    <div>
+      <button type="submit" [disabled]="!registerForm.valid"> Submit </button>
+    </div>
+  </form>
+</div>
