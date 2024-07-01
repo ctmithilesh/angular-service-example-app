@@ -10,6 +10,9 @@ import { LoginUserService } from 'src/app/services/login-user/login-user.service
 })
 export class LoginFormComponent implements OnInit {
 
+
+  title: string = 'Login'
+  description: string = 'Login to Continue!'
   formData = {
     email: '',
     password: ''

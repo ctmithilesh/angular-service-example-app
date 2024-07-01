@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { RegisterModule } from './register/register.module';
+import { UtilsModule } from './utils/utils.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { RegisterModule } from './register/register.module';
     HttpClientModule,
     LoginModule,
     RegisterModule,
+    DashboardModule,
+    UtilsModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

@@ -1,17 +1,41 @@
-<div>
-  <!-- Angular Template Driven Form  -->
-  <form #registerForm="ngForm" class="form" (ngSubmit)="submitData()">
-    <div>
-      <input type="text" name="username" placeholder="Enter username" [(ngModel)]="formData.username" required />
+<div class="hero bg-base-200 min-h-screen">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="text-center lg:text-left">
+      <h1 class="text-5xl font-bold">{{ title }} </h1>
+      <p class="py-6">
+        {{ description }}
+      </p>
     </div>
-    <div>
-      <input type="email" name="email" placeholder="Enter Email" [(ngModel)]="formData.email" required />
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <form class="card-body" #registerForm="ngForm" (ngSubmit)="submitData()">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Username </span>
+          </label>
+          <input type="text" placeholder="username" class="input input-bordered" name="username"
+            [(ngModel)]="formData.username" required />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Email</span>
+          </label>
+          <input type="email" placeholder="email" class="input input-bordered" name="email" [(ngModel)]="formData.email"
+            required />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
+          <input type="password" placeholder="password" class="input input-bordered" name="email"
+            [(ngModel)]="formData.password" required />
+          <!-- <label class="label">
+            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+          </label> -->
+        </div>
+        <div class="form-control mt-6">
+          <button class="btn btn-primary" [disabled]="!registerForm.valid">Register </button>
+        </div>
+      </form>
     </div>
-    <div>
-      <input type="password" name="password" placeholder="Enter Password" [(ngModel)]="formData.password" required />
-    </div>
-    <div>
-      <button type="submit" [disabled]="!registerForm.valid"> Submit </button>
-    </div>
-  </form>
+  </div>
 </div>
